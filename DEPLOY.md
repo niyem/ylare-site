@@ -36,7 +36,7 @@ The contact form on `contact.html` uses **Formspree**, a free service that deliv
 Open a terminal (PowerShell or Git Bash on Windows) and run, line by line, replacing `YOUR-USERNAME`:
 
 ```bash
-cd "C:\Users\bawan\Downloads\ylare-site"
+cd "C:\DEVELOPMENT\ylare-site"
 git init -b main
 git add .
 git commit -m "Initial site"
@@ -97,7 +97,7 @@ The "Last updated" line on the page will format the date automatically in Englis
 Any time you want to change something:
 
 ```bash
-cd "C:\Users\bawan\Downloads\ylare-site"
+cd "C:\DEVELOPMENT\ylare-site"
 # edit files in any text editor (VS Code, Notepad++, etc.)
 git add .
 git commit -m "describe what you changed"
