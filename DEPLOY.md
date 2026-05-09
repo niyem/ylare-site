@@ -1,4 +1,4 @@
-# Deployment Guide for `ylare.groupebm.net`
+# Deployment Guide for `lesul.groupebm.net`
 
 This walks through publishing the site to GitHub Pages with a custom subdomain on your existing GoDaddy `groupebm.net` domain. Total time, about 15 to 30 minutes plus DNS propagation wait.
 
@@ -54,7 +54,7 @@ If prompted, sign in to GitHub. If you don't have Git installed yet, get it from
    - **Branch:** `main`, folder `/ (root)`, click **Save**.
 3. Wait about a minute, refresh. You'll see:
    > Your site is ready to be published at <https://YOUR-USERNAME.github.io/ylare-site/>
-4. Under **Custom domain**, the field should already say `ylare.groupebm.net` because the `CNAME` file is in the repo. If not, type it in and click **Save**.
+4. Under **Custom domain**, the field should already say `lesul.groupebm.net` because the `CNAME` file is in the repo. If not, type it in and click **Save**.
 5. GitHub will start a DNS check, it will fail at first because we haven't set up DNS yet. That's expected.
 
 ## Step 5, Configure DNS in GoDaddy
@@ -64,17 +64,17 @@ If prompted, sign in to GitHub. If you don't have Git installed yet, get it from
 3. Scroll to the **Records** section. Click **Add New Record**.
 4. Fill in exactly:
    - **Type:** `CNAME`
-   - **Name:** `ylare`
+   - **Name:** `lesul`
    - **Value:** `YOUR-USERNAME.github.io` (replace with your actual GitHub username, no `https://`, no trailing slash)
    - **TTL:** `1 Hour`
 5. Click **Save**.
 
-> **Note:** A CNAME record only works on a subdomain like `ylare.groupebm.net`, not the root domain. Since you wanted a subdomain, this is the right setup.
+> **Note:** A CNAME record only works on a subdomain like `lesul.groupebm.net`, not the root domain. Since you wanted a subdomain, this is the right setup.
 
 ## Step 6, Wait, then verify
 
 1. DNS usually propagates within 5 to 30 minutes (occasionally up to a few hours).
-2. Test in a fresh browser tab: <http://ylare.groupebm.net>
+2. Test in a fresh browser tab: <http://lesul.groupebm.net>
 3. Back in GitHub repo, Settings, Pages, the DNS check should show a green checkmark.
 4. Once green, check **Enforce HTTPS**, this gives you free SSL (a padlock icon).
 
@@ -110,7 +110,7 @@ The site rebuilds automatically within about a minute of pushing.
 
 **"DNS check unsuccessful" stays red after an hour:**
 - Verify the GoDaddy CNAME points to `YOUR-USERNAME.github.io` (exact, no extra characters).
-- Try `nslookup ylare.groupebm.net` in PowerShell, it should return your GitHub Pages address.
+- Try `nslookup lesul.groupebm.net` in PowerShell, it should return your GitHub Pages address.
 - If GoDaddy added a trailing dot, that's fine.
 
 **Site shows a 404 page:**
