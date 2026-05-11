@@ -22,18 +22,25 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Mobile nav toggle.
+  // Mobile nav toggle. CSS expects .open on the <ul> inside .site-nav.
   const navToggle = document.querySelector('.nav-toggle');
-  const navRight = document.querySelector('.nav-right');
-  if (navToggle && navRight) {
+  const navList = document.querySelector('.site-nav ul');
+  if (navToggle && navList) {
     navToggle.addEventListener('click', function () {
-      navRight.classList.toggle('open');
+      navList.classList.toggle('open');
+    });
+    // Close the menu when a link is tapped (so visitors aren't stuck on the
+    // same page with the menu still open after they pick something).
+    navList.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        navList.classList.remove('open');
+      });
     });
   }
 
   // Active nav link highlight.
   const path = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('nav.primary a').forEach(function (a) {
+  document.querySelectorAll('.site-nav a').forEach(function (a) {
     const href = a.getAttribute('href');
     if (href === path || (path === '' && href === 'index.html')) {
       a.classList.add('active');
