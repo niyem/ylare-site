@@ -1,6 +1,6 @@
 # Prof. Yendoubé Lare — Personal Website
 
-A clean, modern academic website for the Laboratoire sur l'Énergie Solaire, Université de Lomé, built as static HTML/CSS for hosting on GitHub Pages with a custom subdomain (`lesul.groupebm.net`).
+A clean, modern academic website for the Chaire UNESCO sur les Énergies Renouvelables, Université de Lomé, built as static HTML/CSS for hosting on GitHub Pages with a custom subdomain (`cuer.groupebm.net`).
 
 ## Structure
 
@@ -42,9 +42,9 @@ Then open <http://localhost:8000>.
 
 1. Push this folder to a new GitHub repo (any name, e.g. `ylare-site`)
 2. In repo Settings → Pages: source = `main` branch, root folder
-3. The `CNAME` file already sets the custom domain to `lesul.groupebm.net`
+3. The `CNAME` file already sets the custom domain to `cuer.groupebm.net`
 4. In GoDaddy DNS, add a `CNAME` record:
-   - Host: `lesul`
+   - Host: `cuer`
    - Points to: `<your-github-username>.github.io`
    - TTL: 1 hour
 5. Wait 5–30 min for DNS, then enable "Enforce HTTPS" in repo Pages settings.
