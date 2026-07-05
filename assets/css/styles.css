@@ -317,6 +317,96 @@ body.lang-fr .en-only { display: none !important; }
   font-size: 0.93rem;
 }
 
+/* Chaire directors, expandable click-to-open profiles */
+.directors-intro {
+  color: var(--moss);
+  font-size: 0.93rem;
+  margin: 0.2rem 0 1.25rem;
+}
+.directors {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin: 0.5rem 0 1.5rem;
+}
+.director-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--white);
+  transition: box-shadow .15s ease, border-color .15s ease;
+}
+.director-card:hover { box-shadow: var(--shadow-sm); }
+.director-card[open] { border-color: var(--leaf-light); box-shadow: var(--shadow-sm); }
+.director-card > summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 0.85rem 1rem;
+  cursor: pointer;
+  user-select: none;
+}
+.director-card > summary::-webkit-details-marker { display: none; }
+.director-photo {
+  width: 92px;
+  height: 92px;
+  flex: 0 0 92px;
+  border-radius: 6px;
+  object-fit: cover;
+  object-position: top center;
+  background: var(--off-white);
+}
+.director-photo.is-logo {
+  object-fit: contain;
+  padding: 6px;
+  background: #000;
+}
+.director-id {
+  display: flex;
+  flex-direction: column;
+  gap: 0.12rem;
+  min-width: 0;
+}
+.director-name {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--slate);
+}
+.director-role {
+  font-size: 0.88rem;
+  color: var(--moss);
+  font-style: italic;
+}
+.director-hint {
+  font-size: 0.74rem;
+  color: var(--leaf);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.25rem;
+}
+.director-card[open] .director-hint { display: none; }
+.director-card > summary::after {
+  content: "";
+  margin-left: auto;
+  flex: 0 0 auto;
+  width: 9px;
+  height: 9px;
+  border-right: 2px solid var(--moss-light);
+  border-bottom: 2px solid var(--moss-light);
+  transform: rotate(45deg);
+  transition: transform .2s ease;
+}
+.director-card[open] > summary::after { transform: rotate(-135deg); }
+.director-body {
+  padding: 0.4rem 1.25rem 1.25rem;
+  border-top: 1px solid var(--border-soft);
+}
+.director-body > .profile-meta:first-child,
+.director-body > .section-label:first-child {
+  margin-top: 1rem;
+}
+
 /* Section labels and headers (Prof. Yu uses simple bold labels) */
 .section-label {
   font-weight: 700;
