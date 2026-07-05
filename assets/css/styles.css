@@ -157,6 +157,28 @@ body.lang-fr .en-only { display: none !important; }
   margin-bottom: 0.85rem;
 }
 .lab-title:hover { color: var(--leaf-dark); text-decoration: none; }
+
+/* Chaire UNESCO brand logo in banner */
+.banner-logo {
+  display: block;
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+}
+.lab-title:hover .banner-logo { box-shadow: 0 2px 8px rgba(0,0,0,0.18); }
+
+/* Screen-reader-only text (keeps the title readable for SEO/accessibility) */
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 .lab-title .pi-name {
   font-family: 'Inter', sans-serif;
   font-size: 0.78rem;
