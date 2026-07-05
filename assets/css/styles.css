@@ -348,9 +348,9 @@ body.lang-fr .en-only { display: none !important; }
 }
 .director-card > summary::-webkit-details-marker { display: none; }
 .director-photo {
-  width: 92px;
-  height: 92px;
-  flex: 0 0 92px;
+  width: 64px;
+  height: 64px;
+  flex: 0 0 64px;
   border-radius: 6px;
   object-fit: cover;
   object-position: top center;
@@ -358,7 +358,7 @@ body.lang-fr .en-only { display: none !important; }
 }
 .director-photo.is-logo {
   object-fit: contain;
-  padding: 6px;
+  padding: 4px;
   background: #000;
 }
 .director-id {
