@@ -39,7 +39,15 @@ body {
   background: var(--white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Sticky footer: fill the viewport so the footer never leaves a white gap
+     below it on short pages. */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+/* Main content grows to push the footer to the bottom on short pages. */
+.page-layout { flex: 1 0 auto; }
+.site-footer { flex-shrink: 0; }
 img { max-width: 100%; height: auto; display: block; }
 a { color: var(--leaf); text-decoration: none; transition: color .15s ease; }
 a:hover { color: var(--canopy); text-decoration: underline; }
